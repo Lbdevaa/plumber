@@ -1,0 +1,945 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+@import "base"
+// @import "icons"
+
+.text
+  &-blue
+    color: $blue
+  &-bold
+    font-weight: bold
+  &-underline
+    text-decoration: underline
+
+a
+  color: #000000
+
+.btn
+  text-decoration: none
+  border-radius: 10px
+  border: 1.5px solid $blue
+  padding: em(16px) em(40px)
+  color: $blue
+  transition: .25s ease-in all
+  height: max-content
+  display: inline-block
+  max-width: max-content
+  outline: none
+  &:hover
+    background-color: $blue
+    color: #ffffff
+  &--white
+    background-color: #fff
+    border: none
+    &:hover
+      background-color: $blue
+      color: #ffffff
+  &--blue
+    background: $blueGrad
+    color: #ffffff
+    border: none
+    &:hover
+      filter: contrast(1.5)
+
+.section-title
+  font-size: em(24px)
+  margin: 0 0 em(10px)
+  font-weight: 700
+
+.header
+  padding: 40px 0 10px
+  background-color: #ffffff
+  >div
+    grid-template-columns: max-content 1fr
+    // grid-column-gap: 140px
+    justify-items: end
+  &__logo-box
+    max-width: 275px
+    max-height: 55px
+  &__btn
+    font-size: em(14px)
+    margin-right: 40px
+  &__right-side
+    grid-template-columns: repeat(3, max-content)
+    align-items: center
+    padding-top: 20px
+  &__work-box
+    grid-template-columns: max-content 1fr
+  &__social
+    text-decoration: none
+    width: 44px
+    height: 44px
+    transition: .25s ease-in all
+    display: block
+    margin-right: 20px
+    &:hover
+      filter: contrast(2)
+  &__social-img
+    object-fit: contain
+  &__link
+    font-weight: 500
+    text-decoration: none
+    color: #000000
+  &__text
+    margin: 0
+    font-size: em(14px)
+
+.nav
+  margin: 0
+  padding: 0
+  display: inline-block
+  margin-right: 55px
+  &__item
+    display: inline-block
+    margin-right: 40px
+    &:last-child
+      margin-right: 0
+  &__url
+    text-decoration: none
+    font-size: em(16px)
+    color: #000000
+
+.mobile-menu
+  display: none
+  position: fixed
+  width: 100vw
+  height: 100vh
+  left: 0
+  right: 0
+  bottom: 0
+  background-color: #f0f7ff
+  z-index: 1
+  display: none
+  overflow: hidden
+  &::before
+    content: ''
+    position: absolute
+    top: -15%
+    left: -30%
+    width: 690px
+    height: 690px
+    background: url(../img/banner-des.svg) no-repeat center center
+    z-index: -1
+  &.active
+    display: block
+  &__box
+    height: inherit
+  &__list
+    padding: 140px 0 0 55px
+    margin: 0
+  &__item
+    list-style: none
+    margin: 0 0 em(27px)
+  &__url
+    text-decoration: none
+    text-transform: uppercase
+    font-weight: 500
+    color: #000000
+    &:hover
+      color: $blue
+      font-weight: 700
+  &__contacts
+    position: absolute
+    left: 20px
+    bottom: 35px
+  &__contact
+    display: block
+    font-size: em(20px)
+    text-decoration: none
+    text-decoration: none
+    color: #000000
+    margin-bottom: rem(13px)
+
+.burger
+  border: none
+  display: none
+  z-index: 1000
+  position: relative
+  outline: 0
+  background: #ffffff
+  &__line
+    display: block
+    position: absolute
+    width: 26px
+    height: 2px
+    background-color: #000000
+    top: 50%
+    transform: translateY(-50%)
+    transition: .15s all ease
+    &::before
+      position: absolute
+      display: block
+      content: ''
+      width: 26px
+      height: 2px
+      background-color: #000000
+      top: -8px
+      transition: .15s all ease
+    &::after
+      position: absolute
+      display: block
+      content: ''
+      bottom: -8px
+      width: 18px
+      height: 2px
+      background-color: #000000
+      transition: .15s all ease
+      right: 0
+  &.active
+    .burger__line
+      background-color: transparent
+      &::before
+        transform: rotate(45deg)
+        top: 0
+      &::after
+        transform: rotate(-45deg)
+        bottom: 0
+        width: 26px
+
+.banner
+  padding-top: 30px
+  background: url(../img/banner-bg.png) no-repeat center bottom
+  background-size: 100%
+  position: relative
+  overflow: hidden
+  >.container
+    position: relative
+  &--main
+    padding-top: 85px
+  &__wrap
+    max-width: 700px
+    padding-bottom: 55px
+  &__title
+    font-size: em(45px)
+    margin: 0 0 em(7px)
+    max-width: 640px
+  &__text-box
+    margin-bottom: 60px
+    ul
+      list-style: none
+      margin: 0
+      padding: 0
+      li
+        font-size: em(18px)
+        padding-left: 30px
+        position: relative
+        &::before
+          position: absolute
+          left: 0
+          top: 50%
+          transform: translateY(-50%)
+          content: ''
+          width: 14px
+          height: 22px
+          background: url(../img/blob.svg) no-repeat center center
+          background-size: contain
+    p
+      font-size: em(18px)
+      margin: 0
+    a
+      font-weight: bold
+      transition: .25s ease-in all
+      &:hover
+        color: $blue
+  &__btn
+    display: block
+    max-width: max-content
+    margin-bottom: 25px
+    font-size: em(18px)
+  &__img-box
+    position: absolute
+    right: -5%
+    width: 660px
+    height: 530px
+    bottom: 0
+    height: 90%
+    background: url(../img/banner-circle.svg) no-repeat center bottom
+    background-size: contain
+    &--inner-page
+      width: 720px
+      height: 560px
+  &__img
+    position: absolute
+    bottom: 0
+    left: 50%
+    max-width: 560px
+    max-height: 560px
+    transform: translateX(-50%)
+  &__text
+    margin: 0 0 em(12px)
+    &--mb-100
+      margin-bottom: rem(100px)
+    &--mb-50
+      margin-bottom: rem(50px)
+    &--line
+      position: relative
+      padding-left: 35px
+      &::before
+        position: absolute
+        content: ''
+        background: url(../img/blue-line.svg) no-repeat center center
+        background-size: contain
+        width: 24px
+        height: 2px
+        left: 0
+        top: 50%
+        transform: translateY(-50%)
+  &__list
+    grid-template-columns: repeat(2, 1fr)
+    grid-gap: 40px 60px
+    &--inner-page
+      margin-bottom: 75px
+  &__item
+    grid-template-columns: max-content 1fr
+    grid-column-gap: 20px
+  &__price
+    position: absolute
+    background: #FFFFFF
+    box-shadow: 0px 0px 10px rgba(38, 38, 38, 0.25)
+    border-radius: 1000em
+    width: 150px
+    height: 150px
+    text-align: center
+    left: -5%
+    bottom: 5%
+    p
+      margin: 0
+      font-size: em(16px)
+      padding: rem(38px) rem(14px)
+      span
+        font-size: em(20px)
+
+.block-time
+  background: #FFFFFF
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2)
+  border-radius: 35px 0px 0px 35px
+  max-width: max-content
+  position: absolute
+  right: 0
+  top: 20%
+  z-index: 11
+  &__text
+    margin: 0
+    max-width: 255px
+    padding: em(17px) em(30px) em(17px) em(76px)
+    position: relative
+    &::before
+      position: absolute
+      content: ''
+      background: url(../img/icon-time.svg) no-repeat center center
+      background-size: contain
+      width: 42px
+      height: 42px
+      left: 20px
+      top: 50%
+      transform: translateY(-50%)
+
+.right-slide
+  animation: slide-to-right 1s 1
+  animation-fill-mode: forwards
+  animation-delay: 1s
+  opacity: 0
+
+@keyframes slide-to-right
+  0%
+    opacity: 0
+    right: -100%
+  100%
+    opacity: 1
+    right: 0
+
+.owl
+  &-carousel
+    position: relative
+  &-nav
+    position: absolute
+    top: 30%
+    font-size: 60px
+    font-weight: 100
+    line-height: 1
+    width: 100%
+  &-prev
+    outline: none
+    left: -45px
+    position: absolute
+  &-next
+    outline: none
+    right: -15px
+    position: absolute
+
+.works
+  padding: 70px 0
+  &__title
+    max-width: 680px
+  &__subtitle
+    font-size: em(18px)
+    margin: 0 0 em(54px)
+
+.works-slider
+  margin: 0 auto 20px
+  max-width: 1360px
+  padding: 0 17px
+  &__slide
+    max-width: 413px
+    height: 280px
+    background: #F2F2F2
+    border: 1px solid #D2D2D2
+    box-sizing: border-box
+    border-radius: 10px
+    overflow: hidden
+  &__img
+    object-fit: cover
+    width: 100%
+    height: 100%
+
+.swiper-button-next, .swiper-button-prev
+  width: 11px
+  height: 22px
+  top: 50%
+  outline: 0
+  color: #000000
+
+.swiper-button-next:after, .swiper-button-prev:after
+  width: 11px
+  height: 22px
+  content: ''
+
+.swiper-button-next
+  right: 0
+  &:after
+    background: url(../img/arrow-right.svg) no-repeat center center
+    background-size: contain
+
+.swiper-button-prev
+  left: 30px
+  &:after
+    background: url(../img/arrow-left.svg) no-repeat center center
+    background-size: contain
+
+.advantages
+  padding: 100px 0 120px
+  &__title
+    max-width: 750px
+    margin: 0 0 em(58px)
+  &__list
+    grid-template-columns: 1fr 1fr
+    grid-gap: 125px 200px
+
+.advantage
+  grid-template-columns: max-content 1fr
+  grid-column-gap: 30px
+  &__img-box
+    position: relative
+    width: 70px
+    height: 70px
+    z-index: 11
+    &::before
+      position: absolute
+      content: ''
+      background: url(../img/circle-blue.svg) no-repeat center center
+      background-size: contain
+      width: 100%
+      height: 100%
+      z-index: -1
+  &__img
+    position: relative
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    width: 100%
+    height: 100%
+    padding: 20px
+    object-fit: contain
+  &__title
+    font-size: em(18px)
+    margin: 0 0 em(5px)
+    font-weight: 700
+  &__text
+    margin: 0
+
+.stock
+  padding: 95px 0 75px
+  text-align: center
+  &__title
+    font-weight: bold
+    font-size: em(30px)
+    margin: 0 0 em(10px)
+  &__text
+    font-size: em(20px)
+    margin: 0 0 em(24px)
+  &__btn
+    margin: auto
+    font-size: em(18px)
+    padding: em(18px) em(70px)
+.blue-box
+  color: #ffffff
+  background: url(../img/pattern.svg) no-repeat left center
+  background-size: cover
+
+.services
+  padding: 110px 0 0
+  &--main-page
+    margin-bottom: 80px
+  &__title
+    margin: 0 0 em(40px)
+  &__list
+    grid-template-columns: 1fr 1fr
+    grid-gap: 40px
+
+.service
+  grid-template-columns: max-content 1fr
+  background: $lGrey
+  border: 1px solid $grey
+  border-radius: 10px
+  &__img
+    max-width: 225px
+    height: 100%
+    object-fit: cover
+  &__text-side
+    padding: 30px
+  &__name
+    font-weight: 500
+    font-size: em(18px)
+    margin: 0 0 em(32px)
+  &__price-box
+    margin-bottom: 30px
+  &__price
+    display: inline-block
+    font-size: em(18px)
+    font-weight: 700
+    margin: 0 em(40px) 0 0
+  &__price-old
+    margin: 0
+    display: inline-block
+    text-decoration-line: line-through
+    color: #444444
+  &__btn
+    padding: em(11px) em(30px)
+    font-size: em(14px)
+    margin-right: em(20px)
+    border-radius: 5px
+  &__link
+    font-size: em(13px)
+
+.need
+  padding: 110px 0
+  >div
+    grid-template-columns: 1fr 640px
+    grid-column-gap: 105px
+  &__title
+    margin: 0 0 em(8px)
+    font-size: em(30px)
+  &__btns
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__btn
+    font-size: em(18px)
+    padding: em(18px) em(5px)
+    text-align: center
+    width: 300px
+    max-width: 300px
+  &__url
+    width: 300px
+    max-width: 300px
+    font-size: em(18px)
+    padding: em(18px) em(5px)
+    text-align: center
+    color: #ffffff
+    border: 1.5px solid #ffffff
+
+.stages-work
+  background-color: #f9f9f9
+  padding: 185px 0
+  >div
+    grid-template-columns: max-content 1fr
+    grid-gap: 105px
+    align-items: center
+  &__text-side
+    max-width: 325px
+  &__text
+    font-size: em(18px)
+    margin: 0
+  &__list
+    grid-template-columns: repeat(3, 1fr)
+    grid-column-gap: 70px
+
+.stage
+  position: relative
+  &::after
+    position: absolute
+    content: ''
+    background: url(../img/arrow-stage.svg) no-repeat center center
+    background-size: contain
+    width: 45px
+    height: 12px
+    z-index: 1
+    right: -62px
+    top: 30%
+  &:last-child
+    &::after
+      display: none
+  &__img-box
+    position: relative
+    width: 100px
+    height: 100px
+    margin: 0 auto 30px
+    z-index: 11
+    &::before
+      position: absolute
+      content: ''
+      background: url(../img/circle-blue.svg) no-repeat center center
+      background-size: contain
+      width: 100%
+      height: 100%
+      z-index: -1
+  &__img
+    position: relative
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    width: 100%
+    height: 100%
+    padding: 28px
+    object-fit: contain
+  &__text
+    text-align: center
+    margin: 0
+
+.specialists
+  padding: 90px 0 100px
+  &__title
+    margin: 0 0 em(40px)
+
+.specialists-slider
+  margin: auto
+  max-width: 1360px
+  padding: 0 17px
+  &__wrap
+    max-width: 1280px
+    padding: 0 20px
+    margin: auto
+  &__slide
+    border: 1px solid $grey
+    border-radius: 10px
+    overflow: hidden
+    background: $lGrey
+    max-width: 300px
+
+.specialist
+  &__img-box
+    background: #f3f3f3
+    height: 300px
+  &__img
+    width: 100%
+    height: 100%
+    object-fit: cover
+  &__text-box
+    padding: 20px 15px
+  &__name
+    font-size: em(18px)
+    font-weight: bold
+    margin: 0
+    line-height: 1.3
+  &__exp, &__level
+    line-height: 1.3
+    margin: 0
+
+.reviews
+  padding: 140px 0 0
+  &--main-page
+    margin-bottom: 140px
+  &__title
+    margin: 0 0 em(40px)
+
+.reviews-slider
+  margin: auto
+  max-width: 1360px
+  padding: 0 17px
+  &__wrap
+    max-width: 1280px
+    padding: 0 20px
+    margin: auto
+
+.review
+  max-width: 640px
+  background: $lGrey
+  border: 1px solid $grey
+  box-sizing: border-box
+  border-radius: 10px
+  padding: 36px 16px 20px 26px
+  min-height: 440px
+  &__top
+    grid-template-columns: max-content 1fr
+    grid-column-gap: 40px
+    margin-bottom: 20px
+  &__img-box
+    border-radius: 1000em
+    width: 115px
+    height: 115px
+    overflow: hidden
+    background-color: #f3f3f3
+    border: 1px solid $grey
+  &__img
+    object-fit: cover
+    height: 100%
+    width: 100%
+  &__date
+    font-size: em(12px)
+    margin: 0 0 em(8px)
+  &__title
+    font-size: em(20px)
+    font-weight: bold
+    margin: 0 0 em(32px)
+  &__price, &__time
+    position: relative
+    font-size: em(18px)
+    font-weight: bold
+    padding-left: 40px
+    display: inline-block
+    margin: 0 em(56px) 0 0
+    &::before
+      position: absolute
+      left: 0
+      top: 50%
+      transform: translateY(-50%)
+      content: ''
+      width: 24px
+      height: 24px
+      background: url(../img/icon-price.svg) no-repeat center center
+      background-size: contain
+    &:last-child
+      margin: 0
+  &__time
+    &::before
+      background-image: url(../img/icon-watch-2.svg)
+  &__name
+    font-size: em(18px)
+    font-weight: 700
+    margin: 0 0 em(16px)
+  &__text
+    margin: 0
+    line-height: 1.3
+
+.faq
+  &--main-page
+    margin-bottom: 150px
+  &__title
+    margin: 0 0 em(13px)
+
+.accordion
+  max-width: 1100px
+  &__item
+    position: relative
+    transition: all ease .2s
+    overflow: hidden
+    margin-bottom: 15px
+    &::after
+      position: absolute
+      width: 90%
+      left: 40px
+      bottom: 0
+      height: 1px
+      content: ''
+      background-color: $grey
+  &__title
+    position: relative
+    user-select: none
+    cursor: pointer
+    font-size: em(18px)
+    margin: 0 0 em(14px)
+    padding-left: em(36px)
+    font-weight: 500
+    max-width: max-content
+    transition: all ease-in .25s
+    &::before
+      position: absolute
+      left: 0
+      top: 50%
+      transform: translateY(-50%)
+      content: ''
+      width: 12px
+      height: 14px
+      background: url(../img/arrow-left-acc.svg) no-repeat center center
+      background-size: contain
+    &.active
+      margin: 0 0 em(14px)
+      &::before
+        background-image: url(../img/arrow-down-acc.svg)
+  &__text-box
+    height: 0
+    opacity: 0
+    visibility: hidden
+    transform: scaleY(0)
+    transform-origin: 100% 0
+    transition: all ease .2s
+    margin: 0 0 15px 40px
+    background: $lGrey
+    border: 1px solid $grey
+    border-radius: 10px
+    padding: 14px 16px 0
+    position: relative
+    display: none
+    &.active
+      opacity: 1
+      transform: scaleY(1)
+      height: auto
+      visibility: visible
+      transition: all ease .2s
+      display: block
+    a
+      font-weight: bold
+  &__text
+    margin: 0 0 1em
+    line-height: 1.5
+
+.have-questions
+  &--main-page
+    margin-bottom: 150px
+  &__subtitle
+    font-size: em(18px)
+    margin: 0 0 em(62px)
+  &__form
+    grid-template-columns: repeat(3, 1fr)
+    grid-gap: 20px 40px
+  &__accept
+
+.input
+  background: $lGrey
+  border: 1px solid $grey
+  box-sizing: border-box
+  border-radius: 10px
+  padding: em(20px) em(30px)
+  outline: none
+  transition: .25s ease-in all
+  &:active, &:hover, &:focus
+
+    box-shadow: 2px 2px 4px $blue
+
+.form
+  &__accept
+    font-size: em(12px)
+    margin: 0
+    &--questions
+      // grid-column: 1/3
+      // max-width: 530px
+  &__btn
+    width: 100%
+    max-width: 100%
+    height: 100%
+
+.footer
+  border-top: 1px solid $grey
+  padding: 70px 0 60px
+  background: $lGrey
+  >div
+    grid-template-columns: max-content 1fr max-content
+    justify-content: space-between
+  &__logo
+    max-width: 185px
+    max-height: 36px
+    object-fit: contain
+    margin-right: 40px
+  &__right-side
+    grid-template-columns: repeat(2, max-content)
+    grid-gap: 40px
+  &__work-box
+    grid-template-columns: max-content 1fr
+  &__social
+    text-decoration: none
+    width: 44px
+    height: 44px
+    transition: .25s ease-in all
+    display: block
+    margin-right: 20px
+    &:hover
+      filter: contrast(2)
+  &__social-img
+    object-fit: contain
+    width: 100%
+    height: 100%
+  &__link
+    text-decoration: none
+    color: #000000
+    font-weight: bold
+    font-size: em(18px)
+    margin: 0 0 em(5px)
+    display: block
+  &__text-box
+    max-width: max-content
+  &__text
+    margin: 0
+    font-size: em(14px)
+
+.footer-nav
+  margin: 0
+  padding: 0
+  grid-template-columns: 1fr 1fr
+  grid-gap: 20px 90px
+  max-width: max-content
+  &__item
+    display: inline-block
+    max-width: max-content
+    &:last-child
+      margin-right: 0
+  &__url
+    text-decoration: none
+    font-size: em(16px)
+    color: #000000
+
+.popup-white
+  background-color: #ffffff
+  max-width: 1100px
+  margin: auto
+  border-radius: 10px
+  position: relative
+  padding: 80px 30px
+  .mfp-close
+    font-size: 46px
+    color: #000000
+    right: 0
+    position: absolute
+    font-family: $R
+    font-weight: 300
+  &__img-list
+    grid-template-columns: 1fr 2fr 1fr
+    grid-column-gap: 26px
+  &__img-link
+    // max-width: 380px
+    border: 1px solid $grey
+    height: max-content
+
+.popup-call
+  grid-template-columns: 1fr max-content
+  max-width: 655px
+  padding: 60px 40px 0
+  grid-column-gap: 50px
+  &__title
+    grid-column: 1/3
+    max-width: 450px
+    font-size: em(20px)
+    margin: 0 0 1em
+  &__img-box
+    width: 235px
+    position: relative
+  &__img
+    position: absolute
+    bottom: 0
+    left: 0
+    object-fit: contain
+
+.form-call
+  &__input
+    font-size: em(12px)
+    width: 100%
+    margin-bottom: 30px
+  &__btn
+    max-width: 100%
+    width: 100%
+    margin-bottom: 15px
+  &__accept
+    font-size: em(9px)
+    margin-bottom: rem(60px)
+
+@import "media" // Всегда в конце

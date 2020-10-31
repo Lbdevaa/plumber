@@ -1,0 +1,193 @@
+@import "vars"
+
+/*==========	Desktop First	==========*/
+@media only screen and (max-width : 1370px)
+	.reviews-slider
+		max-width: 1280px
+	.specialists-slider
+		max-width: 1280px
+	.works-slider
+		max-width: 1280px
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1250px)
+	.header
+		>div
+			grid-template-columns: max-content 1fr
+			grid-column-gap: 30px
+		&__btn
+			margin-right: 20px
+	.nav
+		margin-right: 20px
+		&__item
+			margin-right: 20px
+	/**/
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+	/**/
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	.header
+		padding: 20px 0
+		box-shadow: 0px 1px 1px rgba(208, 208, 208, 0.5)
+		>div
+			grid-template-columns: max-content max-content
+			justify-content: space-between
+		&__nav, &__btn, &__work-box
+			display: none
+		&__logo-box
+			max-width: 142px
+		&__right-side
+			display: none
+
+	.block-time
+		max-width: 173px
+		top: 70%
+		&__text
+			font-size: em(11px)
+			padding: em(16px) em(10px) em(16px) em(72px)
+			&::before
+				width: 35px
+				left: 10px
+				height: 35px
+			span
+				font-size: rem(13px)
+
+	.burger
+		display: block
+
+	.banner
+		padding-top: 22px
+		&__title
+			font-size: em(25px)
+		&__text-box
+			margin-bottom: 30px
+			max-width: 290px
+			ul
+				li
+					padding: 0
+					&::before
+						display: none
+		&__text
+			font-size: em(12px)
+			margin-bottom: em(22px)
+			&--line
+				padding: 0
+				font-size: em(14px)
+				max-width: 290px
+				&::before
+					display: none
+		&__img-box
+			position: relative
+			height: 400px
+			width: 100%
+			background: url(../img/banner-circle-mobile.svg) no-repeat center center
+			right: auto
+		&__list
+			grid-template-columns: 1fr
+			grid-gap: 30px
+		&__item
+			align-items: center
+			p
+				margin: 1em 0
+				max-width: 210px
+		&__btn
+			position: absolute
+			bottom: 0
+			z-index: 11
+			width: 90%
+			max-width: 90%
+			text-align: center
+
+	.advantages
+		&__list
+			grid-template-columns: 1fr
+
+	.services
+		&__list
+			grid-template-columns: 1fr
+	.service
+		&__img
+			max-width: 115px
+	.stage
+		&::after
+			display: none
+
+	.need
+		>div
+			grid-template-columns: 1fr
+		&__btns
+			display: block
+	.stages-work
+		>div
+			grid-template-columns: 1fr
+		&__list
+			grid-template-columns: 1fr
+
+	.have-questions
+		&__form
+			grid-template-columns: 1fr
+
+	.footer
+		padding: 20px 0
+		>div
+			grid-template-columns: 1fr 1fr
+		&__logo
+			max-width: 115px
+		&__right-side
+			grid-template-columns: 1fr
+			grid-gap: 10px
+			justify-items: right
+		&__work-box
+			grid-row: 1
+		&__link
+			font-size: em(12px)
+		&__text
+			font-size: em(8px)
+		&__social
+			width: 22px
+			height: 22px
+			margin-right: 10px
+		&__btn
+			font-size: em(9px)
+			padding: rem(7px) rem(14px)
+			// margin: 0 0 0 auto
+	.footer-nav
+		grid-row: 2
+		grid-column: 1/3
+		grid-gap: 10px 35px
+		&__url
+			font-size: em(10px)
+		&__item
+	/**/
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	/**/
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	/**/
+
+/*==========	Mobile First	==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/**/
