@@ -26,13 +26,13 @@
 			</a>
 			<div class="header__right-side grid">
 				<ul class="nav header__nav">
-					<li class="nav__item"><a href="#" class="nav__url">Услуги</a></li>
-					<li class="nav__item"><a href="#" class="nav__url">Как мы работаем</a></li>
-					<li class="nav__item"><a href="#" class="nav__url">Частые вопросы</a></li> 
+					<li class="nav__item"><a href="#services" class="nav__url">Услуги</a></li>
+					<li class="nav__item"><a href="#stages-work" class="nav__url">Как мы работаем</a></li>
+					<li class="nav__item"><a href="#faq" class="nav__url">Частые вопросы</a></li> 
 				</ul>
-				<a href="#" class="btn header__btn open-popup">Перезвоните мне</a>
+				<a href="#manager" class="btn header__btn open-popup">Перезвоните мне</a>
 				<div class="header__work-box grid">	
-					<a href="#" class="header__social">
+					<a href="https://api.whatsapp.com/send/?phone=79068059581&text&app_absent=0" class="header__social" target="_blank">
 						<img src="img/wa.svg" alt="" class="header__social-img">
 					</a>
 					<div class="header__text-box">
@@ -44,6 +44,30 @@
 			<button class="burger">
 				<span class="burger__line"></span>
 			</button>
+			<nav id="mobile-menu" class="mobile-menu">
+				<div class="mobile-menu__bg"></div>    
+				<div class="mobile-menu__box ">  
+						<ul class="mobile-menu__list">
+							<li class="mobile-menu__item"><a class="mobile-menu__url" href="#services">Услуги</a></li>
+							<li class="mobile-menu__item"><a class="mobile-menu__url" href="#works">Наши работы</a></li>
+							<li class="mobile-menu__item"><a class="mobile-menu__url" href="#advantages">Нас выбирают</a></li>
+							<li class="mobile-menu__item"><a class="mobile-menu__url" href="#stages-work">Как мы работаем</a></li>
+							<li class="mobile-menu__item"><a class="mobile-menu__url" href="#specialists">Специалисты</a></li>
+							<li class="mobile-menu__item"><a class="mobile-menu__url" href="#reviews">Отзывы</a></li>
+							<li class="mobile-menu__item"><a class="mobile-menu__url" href="#faq" >Частые вопросы</a></li>
+						</ul>
+						<div class="mobile-menu__contacts grid"> 
+								<a href="https://api.whatsapp.com/send/?phone=79068059581&text&app_absent=0" class="header__social" target="_blank">
+									<img src="img/wa.svg" alt="" class="header__social-img">
+								</a>
+								<div class="header__text-box">
+									<a href="tel:+7 (343) 266 36 43" class="header__link">+7 (343) 266 36 43</a>
+									<p class="header__text">Ежедневно с 9:00 до 20:00</p>
+								</div>
+						</div>
+						<a href="#" class="btn header__btn header__btn--mobile open-popup">Перезвоните мне</a>
+					</div>
+			</nav>
 		</div>
 	</header>
 	<div class="banner banner--main">
@@ -61,11 +85,11 @@
 					</ul>
 				 </div>
 				 <a href="#call" class="banner__btn btn btn--blue open-popup">Вызвать сантехника</a>
-				 <p class="banner__text banner__text--line banner__text--mb-100">Запишитесь по телефону <span class="text-bold">+7 (343) 266 36 43</span> или оставьте заявку на сайте</p>
+				 <p class="banner__text banner__text--line banner__text--mb-100">Запишитесь по телефону <a href="tel:+7 (343) 266 36 43" class="text-bold">+7 (343) 266 36 43</a> или оставьте заявку на сайте</p>
 				 <div class="banner__list grid">
 				 <div class="banner__item grid">
 					 <img src="img/icon-blob.svg" alt="" class="banner__icon">
-					 <p class="banner__text">Оценим работы без выезда по <a href="#" class="text-bold">WhatsApp</a> </p>
+					 <p class="banner__text">Оценим работы без выезда по <a href="https://api.whatsapp.com/send/?phone=79068059581&text&app_absent=0" target="_blank" class="text-bold">WhatsApp</a> </p>
 				 </div>
 				 <div class="banner__item grid">
 					 <img src="img/icon-blob.svg" alt="" class="banner__icon">
@@ -78,7 +102,7 @@
 			</div>
 		</div>
 	</div>
-	<section class="works">
+	<section id="works" class="works">
 		<div class="container">
 			<h2 class="works__title section-title">Мы всегда проверяем качество работ наших сантехников и поэтому <span class="text-blue">даем гарантую на работы 3 года!</span></h2>
 			<p class="works__subtitle">Посмотрите результаты нашей работы и убедитесь сами!</p>
@@ -101,7 +125,7 @@
 			<a href="#" class="works__link">Смотреть все работы</a>
 		</div>
 	</section>
-	<section class="advantages">
+	<section id="advantages" class="advantages">
 		<div class="container">
 			<h2 class="advantages__title section-title">
 				<span class="text-blue">Наша главная цель</span> — решить Вашу проблему максимально быстро и качественно! 
@@ -150,10 +174,10 @@
 		<div class="container">
 			<h2 class="stock__title">Оставь заявку на сайте прямо сейчас и получи скидку 500₽</h2>
 			<p class="stock__text">Акция действует при заказе от 2000 ₽</p>
-			<a href="#" class="btn btn--white stock__btn">Получить скидку</a>
+			<a href="#sale" class="btn btn--white stock__btn open-popup">Получить скидку</a>
 		</div>
 	</section>
-	<section class="services services--main-page">
+	<section id="services" class="services services--main-page">
 		<div class="container">
 			<h2 class="services__title section-title">Наши услуги</h2>
 			<div class="services__list grid">
@@ -165,7 +189,7 @@
 							<p class="service__price">от <span>490</span> ₽</p>
 							<p class="service__price-old">от <span>590</span> ₽</p>
 						</div>
-						<a href="#" class="btn btn--blue service__btn">Вызвать сантехника</a>
+						<a href="#call-service" class="btn btn--blue service__btn open-service open-popup">Вызвать сантехника</a>
 						<a href="" class="service__link">Подробнее об услуге</a>
 					</div>
 				</div>
@@ -174,37 +198,278 @@
 					<div class="service__text-side">
 						<p class="service__name">Замена счетчиков воды</p>
 						<div class="service__price-box">
-							<p class="service__price">от <span>490</span> ₽</p>
-							<p class="service__price-old">от <span>590</span> ₽</p>
+							<p class="service__price">от <span>600</span> ₽</p>
+							<p class="service__price-old">от <span>990</span> ₽</p>
 						</div>
-						<a href="#" class="btn btn--blue service__btn">Вызвать сантехника</a>
+						<a href="#call-service" class="btn btn--blue service__btn open-service open-popup">Вызвать сантехника</a>
+						<a href="" class="service__link">Подробнее об услуге</a>
+					</div>
+				</div> 
+			 
+				<div class="service grid">
+					<img src="img/service-ustanovka-santehniki.png" alt="" class="service__img img-responsive">
+					<div class="service__text-side">
+						<p class="service__name"> Установка счетчиков воды </p>
+						<div class="service__price-box">
+							<p class="service__price">от <span>1200 </span> ₽</p>
+							<p class="service__price-old">от <span>1490 </span> ₽</p>
+						</div>
+						<a href="#call-service" class="btn btn--blue service__btn open-service open-popup">Вызвать сантехника</a>
 						<a href="" class="service__link">Подробнее об услуге</a>
 					</div>
 				</div>
 				<div class="service grid">
-					<img src="img/service-1.png" alt="" class="service__img img-responsive">
+					<img src="img/service-ustanovka-vanny.png" alt="" class="service__img img-responsive">
 					<div class="service__text-side">
-						<p class="service__name">Установка счетчиков воды</p>
+						<p class="service__name">Установка ванны </p>
 						<div class="service__price-box">
-							<p class="service__price">от <span>490</span> ₽</p>
-							<p class="service__price-old">от <span>590</span> ₽</p>
+							<p class="service__price">от <span>1800 </span> ₽</p>
+							<p class="service__price-old">от <span>2890 </span> ₽</p>
 						</div>
-						<a href="#" class="btn btn--blue service__btn">Вызвать сантехника</a>
+						<a href="#call-service" class="btn btn--blue service__btn open-service open-popup">Вызвать сантехника</a>
 						<a href="" class="service__link">Подробнее об услуге</a>
 					</div>
 				</div>
 				<div class="service grid">
-					<img src="img/service-2.png" alt="" class="service__img img-responsive">
+					<img src="img/service-ustanovka-unitaza.png" alt="" class="service__img img-responsive">
 					<div class="service__text-side">
-						<p class="service__name">Установка ванны</p>
+						<p class="service__name">Установка унитаза </p>
 						<div class="service__price-box">
-							<p class="service__price">от <span>490</span> ₽</p>
-							<p class="service__price-old">от <span>590</span> ₽</p>
+							<p class="service__price">от <span>1600 </span> ₽</p>
+							<p class="service__price-old">от <span>2890</span> ₽</p>
 						</div>
-						<a href="#" class="btn btn--blue service__btn">Вызвать сантехника</a>
+						<a href="#call-service" class="btn btn--blue service__btn open-service open-popup">Вызвать сантехника</a>
 						<a href="" class="service__link">Подробнее об услуге</a>
 					</div>
 				</div>
+				<div class="service grid">
+					<img src="img/service-zamena-trub.png" alt="" class="service__img img-responsive">
+					<div class="service__text-side">
+						<p class="service__name">Замена труб в квартире </p>
+						<div class="service__price-box">
+							<p class="service__price">от <span>1500 </span> ₽</p>
+							<p class="service__price-old">от <span>2500 </span> ₽</p>
+						</div>
+						<a href="#call-service" class="btn btn--blue service__btn open-service open-popup">Вызвать сантехника</a>
+						<a href="" class="service__link">Подробнее об услуге</a>
+					</div>
+				</div>
+				<div class="service grid">
+					<img src="img/service-podkluchenie-filtra.png" alt="" class="service__img img-responsive">
+					<div class="service__text-side">
+						<p class="service__name">Подключение фильтра для воды </p>
+						<div class="service__price-box">
+							<p class="service__price">от <span>1200 </span> ₽</p>
+							<p class="service__price-old">от <span>2000 </span> ₽</p>
+						</div>
+						<a href="#call-service" class="btn btn--blue service__btn open-service open-popup">Вызвать сантехника</a>
+						<a href="" class="service__link">Подробнее об услуге</a>
+					</div>
+				</div>
+				<div class="service grid">
+					<img src="img/service-pitevoy-filter.png" alt="" class="service__img img-responsive">
+					<div class="service__text-side">
+						<p class="service__name">Питьевой фильтр + установка </p>
+						<div class="service__price-box">
+							<p class="service__price">от <span>3990 </span> ₽</p>
+							<p class="service__price-old">от <span>5990 </span> ₽</p>
+						</div>
+						<a href="#call-service" class="btn btn--blue service__btn open-service open-popup">Вызвать сантехника</a>
+						<a href="/filter" class="service__link">Подробнее об услуге</a>
+					</div>
+				</div>
+				<div class="service grid">
+					<img src="img/service-podkluchenie-stiral.png" alt="" class="service__img img-responsive">
+					<div class="service__text-side">
+						<p class="service__name">Подключение стиральной машины </p>
+						<div class="service__price-box">
+							<p class="service__price">от <span>800 </span> ₽</p>
+							<p class="service__price-old">от <span>2000 </span> ₽</p>
+						</div>
+						<a href="#call-service" class="btn btn--blue service__btn open-service open-popup">Вызвать сантехника</a>
+						<a href="" class="service__link">Подробнее об услуге</a>
+					</div>
+				</div>
+				<div class="service grid">
+					<img src="img/service-podkluchenie-posud.png" alt="" class="service__img img-responsive">
+					<div class="service__text-side">
+						<p class="service__name">Подключение посудомоечной машины </p>
+						<div class="service__price-box">
+							<p class="service__price">от <span>800 </span> ₽</p>
+							<p class="service__price-old">от <span>2000 </span> ₽</p>
+						</div>
+						<a href="#call-service" class="btn btn--blue service__btn open-service open-popup">Вызвать сантехника</a>
+						<a href="/posudomoika" class="service__link">Подробнее об услуге</a>
+					</div>
+				</div>
+				<div class="service grid">
+					<img src="img/service-ustranenie-zasora.png" alt="" class="service__img img-responsive">
+					<div class="service__text-side">
+						<p class="service__name">Устранение засора раковины, ванны или унитаза </p>
+						<div class="service__price-box">
+							<p class="service__price">от <span>800 </span> ₽</p>
+							<p class="service__price-old">от <span>1990 </span> ₽</p>
+						</div>
+						<a href="#call-service" class="btn btn--blue service__btn open-service open-popup">Вызвать сантехника</a>
+						<a href="" class="service__link">Подробнее об услуге</a>
+					</div>
+				</div>
+				<div class="service grid">
+					<img src="img/service-ustanovka-smesitelya.png" alt="" class="service__img img-responsive">
+					<div class="service__text-side">
+						<p class="service__name">Установка/замена смесителя </p>
+						<div class="service__price-box">
+							<p class="service__price">от <span>1000 </span> ₽</p>
+							<p class="service__price-old">от <span>1590 </span> ₽</p>
+						</div>
+						<a href="#call-service" class="btn btn--blue service__btn open-service open-popup">Вызвать сантехника</a>
+						<a href="" class="service__link">Подробнее об услуге</a>
+					</div>
+				</div>
+				<div class="service grid">
+					<img src="img/service-ustanovka-dush.png" alt="" class="service__img img-responsive">
+					<div class="service__text-side">
+						<p class="service__name">Установка душевой кабины </p>
+						<div class="service__price-box">
+							<p class="service__price">от <span> 3000</span> ₽</p>
+							<p class="service__price-old">от <span>4500 </span> ₽</p>
+						</div>
+						<a href="#call-service" class="btn btn--blue service__btn open-service open-popup">Вызвать сантехника</a>
+						<a href="/dush" class="service__link">Подробнее об услуге</a>
+					</div>
+				</div>
+				<div class="service grid">
+					<img src="img/service-ustanovka-rakoviny.png" alt="" class="service__img img-responsive">
+					<div class="service__text-side">
+						<p class="service__name">Установка раковины </p>
+						<div class="service__price-box">
+							<p class="service__price">от <span>1200 </span> ₽</p>
+							<p class="service__price-old">от <span>1800 </span> ₽</p>
+						</div>
+						<a href="#call-service" class="btn btn--blue service__btn open-service open-popup">Вызвать сантехника</a>
+						<a href="" class="service__link">Подробнее об услуге</a>
+					</div>
+				</div>
+				<div class="service grid">
+					<img src="img/service-podkluchenie-vodonagrev.png" alt="" class="service__img img-responsive">
+					<div class="service__text-side">
+						<p class="service__name">Подключение водонагревателя </p>
+						<div class="service__price-box">
+							<p class="service__price">от <span>1000 </span> ₽</p>
+							<p class="service__price-old">от <span>2000 </span> ₽</p>
+						</div>
+						<a href="#call-service" class="btn btn--blue service__btn open-service open-popup">Вызвать сантехника</a>
+						<a href="" class="service__link">Подробнее об услуге</a>
+					</div>
+				</div>
+				<div class="service grid">
+					<img src="img/service-zamena-radiatora.png" alt="" class="service__img img-responsive">
+					<div class="service__text-side">
+						<p class="service__name">Замена радиатора отопления </p>
+						<div class="service__price-box">
+							<p class="service__price">от <span>900 </span> ₽</p>
+							<p class="service__price-old">от <span>1600 </span> ₽</p>
+						</div>
+						<a href="#call-service" class="btn btn--blue service__btn open-service open-popup">Вызвать сантехника</a>
+						<a href="" class="service__link">Подробнее об услуге</a>
+					</div>
+				</div>
+				<div class="service grid">
+					<img src="img/service-ustanovka-moyki.png" alt="" class="service__img img-responsive">
+					<div class="service__text-side">
+						<p class="service__name">Установка мойки на кухне </p>
+						<div class="service__price-box">
+							<p class="service__price">от <span>1500 </span> ₽</p>
+							<p class="service__price-old">от <span>2300 </span> ₽</p>
+						</div>
+						<a href="#call-service" class="btn btn--blue service__btn open-service open-popup">Вызвать сантехника</a>
+						<a href="" class="service__link">Подробнее об услуге</a>
+					</div>
+				</div>
+				<div class="service grid">
+					<img src="img/service-ustanovka-polotenc.png" alt="" class="service__img img-responsive">
+					<div class="service__text-side">
+						<p class="service__name">Установка водяного полотенцесушителя </p>
+						<div class="service__price-box">
+							<p class="service__price">от <span>700 </span> ₽</p>
+							<p class="service__price-old">от <span>3690 </span> ₽</p>
+						</div>
+						<a href="#call-service" class="btn btn--blue service__btn open-service open-popup">Вызвать сантехника</a>
+						<a href="" class="service__link">Подробнее об услуге</a>
+					</div>
+				</div>
+				<div class="service grid">
+					<img src="img/service-ustanovka-podvesa.png" alt="" class="service__img img-responsive">
+					<div class="service__text-side">
+						<p class="service__name">Установка подвесного унитаза с инсталляцией </p>
+						<div class="service__price-box">
+							<p class="service__price">от <span>2000 </span> ₽</p>
+							<p class="service__price-old">от <span>2990 </span> ₽</p>
+						</div>
+						<a href="#call-service" class="btn btn--blue service__btn open-service open-popup">Вызвать сантехника</a>
+						<a href="" class="service__link">Подробнее об услуге</a>
+					</div>
+				</div>
+				<div class="service grid">
+					<img src="img/service-remont-unitaza.png" alt="" class="service__img img-responsive">
+					<div class="service__text-side">
+						<p class="service__name">Ремонт унитаза </p>
+						<div class="service__price-box">
+							<p class="service__price">от <span>700 </span> ₽</p>
+							<p class="service__price-old">от <span>1590 </span> ₽</p>
+						</div>
+						<a href="#call-service" class="btn btn--blue service__btn open-service open-popup">Вызвать сантехника</a>
+						<a href="" class="service__link">Подробнее об услуге</a>
+					</div>
+				</div>
+				<div class="service grid">
+					<img src="img/service-ustranenie-protechek.png" alt="" class="service__img img-responsive">
+					<div class="service__text-side">
+						<p class="service__name">Устранение протечек/замена сифона </p>
+						<div class="service__price-box">
+							<p class="service__price">от <span>800 </span> ₽</p>
+							<p class="service__price-old">от <span>1390 </span> ₽</p>
+						</div>
+						<a href="#call-service" class="btn btn--blue service__btn open-service open-popup">Вызвать сантехника</a>
+						<a href="" class="service__link">Подробнее об услуге</a>
+					</div>
+				</div>
+				<div class="service grid">
+					<img src="img/service-ustanovka-bide.png" alt="" class="service__img img-responsive">
+					<div class="service__text-side">
+						<p class="service__name">Установка биде </p>
+						<div class="service__price-box">
+							<p class="service__price">от <span>1600 </span> ₽</p>
+							<p class="service__price-old">от <span>2890 </span> ₽</p>
+						</div>
+						<a href="#call-service" class="btn btn--blue service__btn open-service open-popup">Вызвать сантехника</a>
+						<a href="/bide" class="service__link">Подробнее об услуге</a>
+					</div>
+				</div>
+				<div class="service grid">
+					<img src="img/service-ustanovka-izmel.png" alt="" class="service__img img-responsive">
+					<div class="service__text-side">
+						<p class="service__name">Установка пищевого измельчителя </p>
+						<div class="service__price-box">
+							<p class="service__price">от <span>1500 </span> ₽</p>
+							<p class="service__price-old">от <span>2500 </span> ₽</p>
+						</div>
+						<a href="#call-service" class="btn btn--blue service__btn open-service open-popup">Вызвать сантехника</a>
+						<a href="/izmelchitel" class="service__link">Подробнее об услуге</a>
+					</div>
+				</div>
+				<div class="service grid">
+					<img src="img/service-ustanovka-santehniki.png" alt="" class="service__img img-responsive">
+					<div class="service__text-side">
+						<p class="service__name">Установка сантехники под ключ </p>
+						<div class="service__price-box">
+							<p class="service__price">Цена по запросу</p> 
+						</div>
+						<a href="#call-service" class="btn btn--blue service__btn open-service open-popup">Вызвать сантехника</a>
+						<a href="/pod_kluch" class="service__link">Подробнее об услуге</a>
+					</div>
+				</div>
+
 			</div>
 		</div>
 	</section>
@@ -216,16 +481,16 @@
 			</div>
 			<div class="need__btns">
 				<a href="tel:+7 (343) 266 36 43" class="need__btn btn btn--white">+7 (343) 266 36 43</a>
-				<a href="#" class="need__url btn ">Обратный звонок</a>
+				<a href="#manager" class="need__url btn open-popup">Обратный звонок</a>
 			</div>
 		</div>
 	</section>
-	<section class="stages-work">
+	<section id="stages-work" class="stages-work">
 		<div class="container grid">
 			<div class="stages-work__text-side ">
 
 				<h2 class="stages-work__title section-title">Как мы работаем</h2>
-				<p class="stages-work__text">Вам нужно только <span class="text-blue text-bold">оставить заявку</span> — всё остальное сделаем мы!</p>
+				<p class="stages-work__text">Вам нужно только <a href="#call" class="text-blue text-bold open-popup">оставить заявку</a> — всё остальное сделаем мы!</p>
 			</div>
 			<div class="stages-work__list grid">
 				<div class="stage">
@@ -234,9 +499,9 @@
 					</div>
 					<p class="stage__text">Оставьте заявку на сайте или позвоните по телефону
 						<br>
-						<span class="text-bold">
+						<a href="tel:+7 (343) 266 36 43" class="text-bold">
 							+7 (343) 266 36 43
-						</span>
+						</a>
 					</p>
 				</div>
 				<div class="stage">
@@ -255,7 +520,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="specialists">
+	<section id="specialists" class="specialists">
 		<div class="container">
 			<h2 class="specialists__title section-title">Мы постоянно повышаем компетенции наших сотрудников</h2>
 		</div>
@@ -329,94 +594,87 @@
 					<p class="need__text">Отправьте фото нам в WhatsApp и опишите проблему и наш мастер рассчитает ориентировочную стоимость работ.</p>
 				</div>
 			<div class="need__btns">
-				<a href="#" class="need__btn btn btn--white">Рассчитать в WhatsApp</a>
-				<a href="#" class="need__url btn ">Заказать обратный звонок</a>
+				<a href="https://api.whatsapp.com/send/?phone=79068059581&text&app_absent=0" class="need__btn btn btn--white" target="_blank">Рассчитать в WhatsApp</a>
+				<a href="#manager" class="need__url btn open-popup">Заказать обратный звонок</a>
 			</div>
 		</div>
 	</section> 
-	<section class="reviews reviews--main-page">
+	<section id="reviews" class="reviews reviews--main-page">
 		<div class="container">
 			<h2 class="reviews__title section-title">Мы решили проблемы <span class="text-blue">более 60 000</span>  человек</h2>
 		</div>
-		<div class="reviews-slider owl-carousel owl-theme">
+		<div class="reviews-slider owl-carousel owl-theme"> 
 			<div class="reviews-slider__slide review">
 				<div class="review__top grid">
-				<div class="review__img-box">
-					<img src="img/review-1.png" alt="" class="review__img img-responsive">
-				</div>
-					<div class="review__text-side">
-						<p class="review__date">05.07.2020</p>
-						<p class="review__title">Установка счетчиков воды</p>
-						<p class="review__price">2400 ₽ </p>
-						<p class="review__time">90 Мин.</p>
-					</div>
-				</div>
-				<div class="review__bot">
-					<p class="review__name">Анна Сидорова</p>
-					<p class="review__text">Обратилась в компанию “Ваш сантехник” для установки счетчиков воды. Диспетчер внимательно приняла заказ и проконсультировала по стоимости. В этой компании лучшие цены на установку счетчиков! Искренняя благодарность мастеру за добросовестное и честное отношение к делу и людям. Помог в приобретении счетчиков, сделал работу аккуратно, быстро и качественно, ответил на все вопросы по поводу дальнейшей эксплуатации, дал несколько советов. Планирую провести ремонт душевой кабины. Буду обращаться только в “Ваш сантехник”!</p>
-				</div>
-			</div> 
+					<div class="review__img-box">
+						<img src="img/review-1.png" alt="" class="review__img img-responsive">
+					</div> 
+							<p class="review__date">05.07.2020</p>
+							<p class="review__title">Установка счетчиков воды</p>
+							<div class="review__info">
+								<p class="review__price">2400 ₽  </p>
+								<p class="review__time">90 Мин.</p> 
+							</div>
+						<p class="review__name">Анна Сидорова</p>
+				</div> 
+					<p class="review__text">
+						Обратилась в компанию “Ваш сантехник” для установки счетчиков воды. Диспетчер внимательно приняла заказ и проконсультировала по стоимости. В этой компании лучшие цены на установку счетчиков! Искренняя благодарность мастеру за добросовестное и честное отношение к делу и людям. Помог в приобретении счетчиков, сделал работу аккуратно, быстро и качественно, ответил на все вопросы по поводу дальнейшей эксплуатации, дал несколько советов. Планирую провести ремонт душевой кабины. Буду обращаться только в “Ваш сантехник”!
+					</p>
+			</div>
 			<div class="reviews-slider__slide review">
 				<div class="review__top grid">
-				<div class="review__img-box">
-					<img src="img/review-2.png" alt="" class="review__img img-responsive">
-				</div>
-					<div class="review__text-side">
-						<p class="review__date">11.09.2020</p>
-						<p class="review__title">Устранение протечки</p>
-						<p class="review__price">800 ₽  </p>
-						<p class="review__time">35 Мин.</p>
-					</div>
-				</div>
-				<div class="review__bot">
-					<p class="review__name">Марина Смарыгина</p>
+					<div class="review__img-box">
+						<img src="img/review-2.png" alt="" class="review__img img-responsive">
+					</div> 
+							<p class="review__date">11.09.2020</p>
+							<p class="review__title">Устранение протечки</p>
+							<div class="review__info">
+								<p class="review__price">800 ₽  </p>
+								<p class="review__time">35 Мин.</p> 
+							</div>
+						<p class="review__name">Марина Смарыгина</p>
+				</div> 
 					<p class="review__text">
 						Обратилась с проблемой протечки трубы и полотенчика. Сантехники из управляшки сказали, что необходимо будет ломать короб и полностью менять трубу. Решила попытать удачу и проконсультироваться у опытных специалистов. И УРА! Ничего ломать не пришлось, мастер съездил, купил необходимые прокладки, все заменил. Я безумно довольна. Рассказал, что система на трубах стоит не надежная и, возможно протекание всё равно когда-то вернется. Все поняла, но теперь я хотя бы не буду в попыхах и на нервах искать человека, который разгромит мне стену, а займусь этим спокойно во время следующего предполагающегося ремонта ванной :) СПАСИБО! 	
 					</p>
-				</div>
 			</div> 
 			<div class="reviews-slider__slide review">
 				<div class="review__top grid">
-				<div class="review__img-box">
-					<img src="img/review-3.png" alt="" class="review__img img-responsive">
-				</div>
-					<div class="review__text-side">
-						<p class="review__date">25.05.2020</p>
-						<p class="review__title">Замена счетчиков воды</p>
-						<p class="review__price">600 ₽ </p>
-						<p class="review__time">40 Мин.</p>
-					</div>
-				</div>
-				<div class="review__bot">
-					<p class="review__name">Наталья Блинова</p>
+					<div class="review__img-box">
+						<img src="img/review-3.png" alt="" class="review__img img-responsive">
+					</div> 
+							<p class="review__date">25.05.2020</p>
+							<p class="review__title">Замена счетчиков воды</p>
+							<div class="review__info">
+								<p class="review__price">600 ₽   </p>
+								<p class="review__time">40 Мин.</p> 
+							</div>
+						<p class="review__name">Наталья Блинова</p>
+				</div> 
 					<p class="review__text">
-						Огромное спасибо сотрудникам компании "Ваш сантехник"!!! Подошло время заменить счетчики горячей и холодной воды, решили обратиться в компанию "Ваш сантехник" и не пожалели. Заказ приняла очень вежливая девушка, с которой сразу же обсудили все детали. Мастер пришел в назначенное время и даже чуток пораньше, что очень даже порадовало, все сделал хорошо и аккуратно, мы остались довольны.	
+						Огромное спасибо сотрудникам компании "Ваш сантехник"!!! Подошло время заменить счетчики горячей и холодной воды, решили обратиться в компанию "Ваш сантехник" и не пожалели. Заказ приняла очень вежливая девушка, с которой сразу же обсудили все детали. Мастер пришел в назначенное время и даже чуток пораньше, что очень даже порадовало, все сделал хорошо и аккуратно, мы остались довольны.
 					</p>
-				</div>
-			</div> 
+			</div>
 			<div class="reviews-slider__slide review">
 				<div class="review__top grid">
-				<div class="review__img-box">
-					<img src="img/review-4.png" alt="" class="review__img img-responsive">
-				</div>
-					<div class="review__text-side">
-						<p class="review__date">17.08.2020</p>
-						<p class="review__title">Установка счетчиков воды</p>
-						<p class="review__price">5500 ₽ </p>
-						<p class="review__time">190 Мин.</p>
-					</div>
-				</div>
-				<div class="review__bot">
-					<p class="review__name">Оксана</p>
+					<div class="review__img-box">
+						<img src="img/review-4.png" alt="" class="review__img img-responsive">
+					</div> 
+							<p class="review__date">17.08.2020</p>
+							<p class="review__title">Установка счетчиков воды</p>
+							<div class="review__info">
+								<p class="review__price">5500 ₽  </p>
+								<p class="review__time">190 Мин.</p> 
+							</div>
+						<p class="review__name">Оксана</p>
+				</div> 
 					<p class="review__text">
-						Огромное спасибо компании за человеческое отношение). От операторов в онлайн чате,  до самих мастеров - все приятные и адекватные люди. По качеству- заказывали установку счётчиков. Специалист пришел вовремя, скоординировал по запчастям (не всё так просто было, как по фото), мы всё в процессе докупили. В итоге всё было готово за 3 с небольшим часа (у нас тяжёлый случай). Всем довольны, всё понравилось))) Обязательно в случае чего будем обращаться в “Ваш сантехник"	
+						Огромное спасибо компании за человеческое отношение). От операторов в онлайн чате,  до самих мастеров - все приятные и адекватные люди. По качеству- заказывали установку счётчиков. Специалист пришел вовремя, скоординировал по запчастям (не всё так просто было, как по фото), мы всё в процессе докупили. В итоге всё было готово за 3 с небольшим часа (у нас тяжёлый случай). Всем довольны, всё понравилось))) Обязательно в случае чего будем обращаться в “Ваш сантехник"
 					</p>
-				</div>
-			</div> 
+			</div>
 		</div>
-	</section>
-
-	<section class="faq faq--main-page">
+	</section> 
+	<section id="faq" class="faq faq--main-page">
 		<div class="container">
 			<h2 class="faq__title section-title">Часто задаваемые вопросы</h2>
 			<div class="accordion">
@@ -576,7 +834,7 @@
 				<input type="text" name="phone" id="" placeholder="Телефон" class="input" required>
 				<button class="btn btn--blue form__btn">Заказать обратный звонок</button>
 				<p class="form__accept form__accept--questions">Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь 
-					с <a href="#">политикой конфиденциальности</a></p>
+					с <a href="/policy.html" target="_blank">политикой конфиденциальности</a></p>
 			</form>
 		</div>
 	</section>
@@ -585,19 +843,19 @@
 			<img src="img/logo.svg" alt="" class="footer__logo">
 			 
 				<ul class="footer-nav grid">
-					<li class="footer-nav__item"><a href="#" class="footer-nav__url">Услуги</a></li>
-					<li class="footer-nav__item"><a href="#" class="footer-nav__url">Специалисты</a></li>
-					<li class="footer-nav__item"><a href="#" class="footer-nav__url">Наши работы</a></li>
-					<li class="footer-nav__item"><a href="#" class="footer-nav__url">Отзывы</a></li>
-					<li class="footer-nav__item"><a href="#" class="footer-nav__url">Нас выбирают</a></li>
-					<li class="footer-nav__item"><a href="#" class="footer-nav__url">Частые вопросы</a></li> 
-					<li class="footer-nav__item"><a href="#" class="footer-nav__url">Как мы работаем</a></li>
+					<li class="footer-nav__item"><a href="#services" class="footer-nav__url">Услуги</a></li>
+					<li class="footer-nav__item"><a href="#specialists" class="footer-nav__url">Специалисты</a></li>
+					<li class="footer-nav__item"><a href="#works" class="footer-nav__url">Наши работы</a></li>
+					<li class="footer-nav__item"><a href="#reviews" class="footer-nav__url">Отзывы</a></li>
+					<li class="footer-nav__item"><a href="#advantages" class="footer-nav__url">Нас выбирают</a></li>
+					<li class="footer-nav__item"><a href="#faq" class="footer-nav__url">Частые вопросы</a></li> 
+					<li class="footer-nav__item"><a href="#stages-work" class="footer-nav__url">Как мы работаем</a></li>
 				</ul>
 		 
 			<div class="footer__right-side grid">
-				<a href="#" class="btn footer__btn open-popup">Перезвоните мне</a>
+				<a href="#manager" class="btn footer__btn open-popup">Перезвоните мне</a>
 				<div class="footer__work-box grid">	
-					<a href="#" class="footer__social">
+					<a href="https://api.whatsapp.com/send/?phone=79068059581&text&app_absent=0" class="footer__social" target="_blank">
 						<img src="img/wa.svg" alt="" class="footer__social-img">
 					</a>
 					<div class="footer__text-box">
@@ -605,6 +863,16 @@
 						<p class="footer__text">Ежедневно с 9:00 до 20:00</p>
 					</div>
 				</div>
+			</div>
+			<div class="footer__requisites">
+				<p>ИП ВАЛЕНОК МИХАИЛ ВЛАДИМИРОВИЧ</p>
+				<p>Номер счёта: 40802810338410000751 </p>
+				<p>Валюта: Рубли </p>
+				<p>ИНН: 665899287634</p>
+				<p>Банк: ФИЛИАЛ «ЕКАТЕРИНБУРГСКИЙ» АО «АЛЬФА-БАНК»</p>
+				<p>БИК: 046577964</p>
+				<p>Кор. счёт: 30101810100000000964</p>
+				<p>Адрес: Репина 95, офис 226</p>
 			</div>
 		</div>
 	</footer>
@@ -622,39 +890,62 @@
 		</div>
 	</div>
 	<div id="call" class="popup-white popup-call grid mfp-hide">
-		<h2 class="popup-call__title">Оставьте свои контактные данные, и мы устраним все проблемы!</h2>
+		<div class="popup-call__header">
+			<h2 class="popup-call__title">Оставьте свои контактные данные, и мы устраним все проблемы!</h2>
+		</div>
 		<form action="" class="popup-call__form form-call">
 			<input type="text" name="name" class="form-call__input input" required placeholder="Имя" >
 			<input type="text" name="phone" class="form-call__input input" required placeholder="Телефон">
 			<button class="form-call__btn btn btn--blue">Обратный звонок</button>
 			<p class="form__accept form-call__accept">Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь 
-				с <a href="#">политикой конфиденциальности</a></p>
+				с <a href="/policy.html" target="_blank">политикой конфиденциальности</a></p>
+		</form>
+		<div class="popup-call__img-box">
+			<img src="img/call-santeh.png" alt="" class="popup-call__img img-responsive">
+		</div>
+	</div>
+	<div id="call-service" class="popup-white popup-call grid mfp-hide">
+		<div class="popup-call__header">
+			<h2 class="popup-call__title">Заявка на услугу <span class="text-blue">поверка счетчиков</span></h2>
+			<p class="popup-call__subtitle">Оставьте свои контактные данные, и мы устраним все проблемы!</p>
+		</div>
+		<form action="" class="popup-call__form form-call">
+			<input type="text" name="name" class="form-call__input input" required placeholder="Имя" >
+			<input type="text" name="phone" class="form-call__input input" required placeholder="Телефон">
+			<button class="form-call__btn btn btn--blue">Обратный звонок</button>
+			<p class="form__accept form-call__accept">Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь 
+				с <a href="/policy.html" target="_blank">политикой конфиденциальности</a></p>
 		</form>
 		<div class="popup-call__img-box">
 			<img src="img/call-santeh.png" alt="" class="popup-call__img img-responsive">
 		</div>
 	</div>
 	<div id="manager" class="popup-white popup-call grid mfp-hide">
-		<h2 class="popup-call__title">Оставьте свои контактные данные, и мы устраним все проблемы!</h2>
+		<div class="popup-call__header">
+			<h2 class="popup-call__title">Оставьте свои контактные данные, и мы устраним все проблемы!</h2>
+		</div>
 		<form action="" class="popup-call__form form-call">
 			<input type="text" name="name" class="form-call__input input" required placeholder="Имя" >
 			<input type="text" name="phone" class="form-call__input input" required placeholder="Телефон">
 			<button class="form-call__btn btn btn--blue">Обратный звонок</button>
 			<p class="form__accept form-call__accept">Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь 
-				с <a href="#">политикой конфиденциальности</a></p>
+				с <a href="/policy.html" target="_blank">политикой конфиденциальности</a></p>
 		</form>
 		<div class="popup-call__img-box">
 			<img src="img/call-manager.png" alt="" class="popup-call__img img-responsive">
 		</div>
 	</div>
 	<div id="sale" class="popup-white popup-call grid mfp-hide">
-		<h2 class="popup-call__title">Оставьте свои контактные данные, и мы устраним все проблемы!</h2>
+		<div class="popup-call__header">
+			<h2 class="popup-call__title">Оставьте свои контактные данные, и мы устраним все проблемы!</h2>
+			<p class="popup-call__subtitle">Менеджер свяжется с вами в течение нескольких минут</p>
+		</div>
 		<form action="" class="popup-call__form form-call">
 			<input type="text" name="name" class="form-call__input input" required placeholder="Имя" >
 			<input type="text" name="phone" class="form-call__input input" required placeholder="Телефон">
 			<button class="form-call__btn btn btn--blue">Обратный звонок</button>
 			<p class="form__accept form-call__accept">Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь 
-				с <a href="#">политикой конфиденциальности</a></p>
+				с <a href="/policy.html" target="_blank">политикой конфиденциальности</a></p>
 		</form>
 		<div class="popup-call__img-box">
 			<img src="img/call-shout.png" alt="" class="popup-call__img img-responsive">

@@ -3,6 +3,10 @@
 @import "vars"
 @import "base"
 // @import "icons"
+body
+  &.fixed
+    height: 100%
+    overflow: hidden
 
 .text
   &-blue
@@ -25,7 +29,9 @@ a
   height: max-content
   display: inline-block
   max-width: max-content
+  width: max-content
   outline: none
+  cursor: pointer
   &:hover
     background-color: $blue
     color: #ffffff
@@ -48,15 +54,20 @@ a
   font-weight: 700
 
 .header
-  padding: 40px 0 10px
+  padding: 20px 0 10px
   background-color: #ffffff
   >div
     grid-template-columns: max-content 1fr
     // grid-column-gap: 140px
     justify-items: end
   &__logo-box
-    max-width: 275px
-    max-height: 55px
+    width: 315px
+    height: 65px
+    display: inline-block
+  &__logo
+    width: 100%
+    height: 100%
+    object-fit: contain
   &__btn
     font-size: em(14px)
     margin-right: 40px
@@ -77,6 +88,8 @@ a
       filter: contrast(2)
   &__social-img
     object-fit: contain
+    width: 100%
+    height: 100%
   &__link
     font-weight: 500
     text-decoration: none
@@ -101,17 +114,15 @@ a
     color: #000000
 
 .mobile-menu
-  display: none
   position: fixed
-  width: 100vw
-  height: 100vh
   left: 0
   right: 0
-  bottom: 0
-  background-color: #f0f7ff
-  z-index: 1
-  display: none
+  top: 67px
+  height: 90%
+  z-index: 111
   overflow: hidden
+  display: none
+
   &::before
     content: ''
     position: absolute
@@ -122,27 +133,56 @@ a
     background: url(../img/banner-des.svg) no-repeat center center
     z-index: -1
   &.active
-    display: block
+    // display: block
+    .mobile-menu__box
+      left: 0
+  &__bg
+    position: absolute
+    width: 100%
+    height: 100%
+    background: #0b0b0b
+    opacity: .5
+    z-index: -1
   &__box
     height: inherit
+    z-index: 1
+    max-width: 65vw
+    width: max-content
+    background-color: #ffffff
+    height: 100vh
+    transition: all .35s ease-in
+    left: -100%
+    position: absolute
   &__list
-    padding: 140px 0 0 55px
+    padding: 18px 0
     margin: 0
   &__item
     list-style: none
-    margin: 0 0 em(27px)
+    padding: rem(12px) 0 rem(12px) rem(40px)
+    &:hover
+      background-color: $lGrey
+      position: relative
+      &::before
+        width: 7px
+        height: 100%
+        position: absolute
+        content: ''
+        background-color: $blue
+        left: 0
+        top: 0
   &__url
     text-decoration: none
-    text-transform: uppercase
     font-weight: 500
     color: #000000
-    &:hover
-      color: $blue
-      font-weight: 700
+    font-size: em(14px)
+    display: block
   &__contacts
-    position: absolute
-    left: 20px
-    bottom: 35px
+    // margin: auto
+    // max-width: 155px
+    padding: 0 40px
+    grid-template-columns: max-content 1fr
+    margin-bottom: 15px
+
   &__contact
     display: block
     font-size: em(20px)
@@ -158,10 +198,12 @@ a
   position: relative
   outline: 0
   background: #ffffff
+  width: 26px
+  padding: 0
   &__line
     display: block
     position: absolute
-    width: 26px
+    width: 100%
     height: 2px
     background-color: #000000
     top: 50%
@@ -171,7 +213,7 @@ a
       position: absolute
       display: block
       content: ''
-      width: 26px
+      width: 100%
       height: 2px
       background-color: #000000
       top: -8px
@@ -181,7 +223,7 @@ a
       display: block
       content: ''
       bottom: -8px
-      width: 18px
+      width: 70%
       height: 2px
       background-color: #000000
       transition: .15s all ease
@@ -195,7 +237,7 @@ a
       &::after
         transform: rotate(-45deg)
         bottom: 0
-        width: 26px
+        width: 100%
 
 .banner
   padding-top: 30px
@@ -205,15 +247,25 @@ a
   overflow: hidden
   >.container
     position: relative
+    min-height: 400px
   &--main
     padding-top: 85px
   &__wrap
     max-width: 700px
     padding-bottom: 55px
+    position: relative
+    z-index: 1
   &__title
     font-size: em(45px)
     margin: 0 0 em(7px)
     max-width: 640px
+    font-weight: 900
+    &--inner-page
+      max-width: 950px
+      z-index: 1
+      position: relative
+    span
+      color: $blue
   &__text-box
     margin-bottom: 60px
     ul
@@ -247,6 +299,8 @@ a
     max-width: max-content
     margin-bottom: 25px
     font-size: em(18px)
+    &:hover
+      transform: scale(1.05)
   &__img-box
     position: absolute
     right: -5%
@@ -270,7 +324,9 @@ a
     margin: 0 0 em(12px)
     &--mb-100
       margin-bottom: rem(100px)
-    &--mb-50
+    a
+      text-decoration: none
+    &--inner-page
       margin-bottom: rem(50px)
     &--line
       position: relative
@@ -309,6 +365,10 @@ a
       padding: rem(38px) rem(14px)
       span
         font-size: em(20px)
+  &__icon
+    object-fit: contain
+    height: 50px
+    width: 50px
 
 .block-time
   background: #FFFFFF
@@ -474,8 +534,12 @@ a
     padding: em(18px) em(70px)
 .blue-box
   color: #ffffff
+  background-color: $blue
   background: url(../img/pattern.svg) no-repeat left center
   background-size: cover
+  -webkit-background-size: cover
+  -moz-background-size: cover
+  -o-background-size: cover
 
 .services
   padding: 110px 0 0
@@ -492,8 +556,10 @@ a
   background: $lGrey
   border: 1px solid $grey
   border-radius: 10px
+  overflow: hidden
   &__img
     max-width: 225px
+    max-height: 225px
     height: 100%
     object-fit: cover
   &__text-side
@@ -551,7 +617,7 @@ a
 
 .stages-work
   background-color: #f9f9f9
-  padding: 185px 0
+  padding: 125px 0
   >div
     grid-template-columns: max-content 1fr
     grid-gap: 105px
@@ -561,6 +627,8 @@ a
   &__text
     font-size: em(18px)
     margin: 0
+    a
+      text-decoration: none
   &__list
     grid-template-columns: repeat(3, 1fr)
     grid-column-gap: 70px
@@ -606,7 +674,8 @@ a
   &__text
     text-align: center
     margin: 0
-
+    a
+      text-decoration: none
 .specialists
   padding: 90px 0 100px
   &__title
@@ -672,6 +741,7 @@ a
   min-height: 440px
   &__top
     grid-template-columns: max-content 1fr
+    grid-template-rows: repeat( auto-fit, 18px )
     grid-column-gap: 40px
     margin-bottom: 20px
   &__img-box
@@ -681,17 +751,23 @@ a
     overflow: hidden
     background-color: #f3f3f3
     border: 1px solid $grey
+    grid-row: 1/4
+    margin-bottom: 20px
   &__img
     object-fit: cover
     height: 100%
     width: 100%
+  &__info
+    align-self: center
   &__date
     font-size: em(12px)
-    margin: 0 0 em(8px)
+    // margin: 0 0 em(8px)
+    margin: 0
   &__title
     font-size: em(20px)
     font-weight: bold
-    margin: 0 0 em(32px)
+    // margin: 0 0 em(32px)
+    margin: 0
   &__price, &__time
     position: relative
     font-size: em(18px)
@@ -717,7 +793,9 @@ a
   &__name
     font-size: em(18px)
     font-weight: 700
-    margin: 0 0 em(16px)
+    grid-column: 1/3
+    // margin: 0 0 em(16px)
+    margin: 0
   &__text
     margin: 0
     line-height: 1.3
@@ -836,9 +914,10 @@ a
   >div
     grid-template-columns: max-content 1fr max-content
     justify-content: space-between
+    grid-gap: 20px
   &__logo
-    max-width: 185px
-    max-height: 36px
+    max-width: 300px
+    max-height: 60px
     object-fit: contain
     margin-right: 40px
   &__right-side
@@ -871,7 +950,8 @@ a
   &__text
     margin: 0
     font-size: em(14px)
-
+  &__requisites
+    grid-column: 1/3
 .footer-nav
   margin: 0
   padding: 0
@@ -915,11 +995,16 @@ a
   max-width: 655px
   padding: 60px 40px 0
   grid-column-gap: 50px
-  &__title
+  &__header
     grid-column: 1/3
+    margin: 0 0 20px
+  &__title
     max-width: 450px
     font-size: em(20px)
     margin: 0 0 1em
+  &__subtitle
+    font-size: em(14px)
+    margin: 0
   &__img-box
     width: 235px
     position: relative
@@ -941,5 +1026,8 @@ a
   &__accept
     font-size: em(9px)
     margin-bottom: rem(60px)
+
+.policy
+  padding: 60px 0
 
 @import "media" // Всегда в конце

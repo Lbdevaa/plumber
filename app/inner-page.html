@@ -19,16 +19,66 @@
 </head>
 
 <body>
-	
+	<header class="header">
+		<div class="container grid">
+			<a href="/" class="header__logo-box">
+				<img src="img/logo.svg" alt="" class="header__logo img-responsive">
+			</a>
+			<div class="header__right-side grid">
+				<ul class="nav header__nav">
+					<li class="nav__item"><a href="#services" class="nav__url">Услуги</a></li>
+					<li class="nav__item"><a href="#stages-work" class="nav__url">Как мы работаем</a></li>
+					<li class="nav__item"><a href="#faq" class="nav__url">Частые вопросы</a></li> 
+				</ul>
+				<a href="#manager" class="btn header__btn open-popup">Перезвоните мне</a>
+				<div class="header__work-box grid">	
+					<a href="https://api.whatsapp.com/send/?phone=79068059581&text&app_absent=0" class="header__social" target="_blank">
+						<img src="img/wa.svg" alt="" class="header__social-img">
+					</a>
+					<div class="header__text-box">
+						<a href="tel:+7 (343) 266 36 43" class="header__link">+7 (343) 266 36 43</a>
+						<p class="header__text">Ежедневно с 9:00 до 20:00</p>
+					</div>
+				</div>
+			</div>
+			<button class="burger">
+				<span class="burger__line"></span>
+			</button>
+			<nav id="mobile-menu" class="mobile-menu">
+				<div class="mobile-menu__bg"></div>    
+				<div class="mobile-menu__box ">  
+						<ul class="mobile-menu__list">
+							<li class="mobile-menu__item"><a class="mobile-menu__url" href="#services">Услуги</a></li>
+							<li class="mobile-menu__item"><a class="mobile-menu__url" href="#works">Наши работы</a></li>
+							<li class="mobile-menu__item"><a class="mobile-menu__url" href="#">Нас выбирают</a></li>
+							<li class="mobile-menu__item"><a class="mobile-menu__url" href="#stages-work">Как мы работаем</a></li>
+							<li class="mobile-menu__item"><a class="mobile-menu__url" href="#specialists">Специалисты</a></li>
+							<li class="mobile-menu__item"><a class="mobile-menu__url" href="#reviews">Отзывы</a></li>
+							<li class="mobile-menu__item"><a class="mobile-menu__url" href="#faq" >Частые вопросы</a></li>
+						</ul>
+						<div class="mobile-menu__contacts grid"> 
+								<a href="https://api.whatsapp.com/send/?phone=79068059581&text&app_absent=0" class="header__social" target="_blank">
+									<img src="img/wa.svg" alt="" class="header__social-img">
+								</a>
+								<div class="header__text-box">
+									<a href="tel:+7 (343) 266 36 43" class="header__link">+7 (343) 266 36 43</a>
+									<p class="header__text">Ежедневно с 9:00 до 20:00</p>
+								</div>
+						</div>
+						<a href="#" class="btn header__btn header__btn--mobile open-popup">Перезвоните мне</a>
+					</div>
+			</nav>
+		</div>
+	</header>
 	<div class="banner">
 		<div class="block-time right-slide ">
 			<p class="block-time__text">Приедем в течение <span class="text-blue text-bold"> 30 минут</span></p>
 		</div>
 		<div class="container">
+			<h1 class="banner__title banner__title--inner-page">
+				Поверка <span class="text-blue">счетчиков воды</span> <br> в Екатеринбурге 
+			</h1>
 			<div class="banner__wrap ">
-				<h1 class="banner__title">
-					Поверка <span class="text-blue">счетчиков воды</span> <br> в Екатеринбурге 
-				</h1>
 				<div class="banner__text-box">
 					<p>Поверим счетчики за 30 минут. После поверки Вам выдается свидетельство, которое действует еще 4 и 6 лет на горячую и холодную воду.
 					</p>
@@ -58,8 +108,8 @@
 							</p>
 						</div>
 					</div>
-				 <p class="banner__text banner__text--line banner__text--mb-50">Запишитесь по телефону +7 (343) 266 36 43 или оставьте заявку на сайте</p>
-				 <a href="#licenses" class="banner__btn btn btn--blue open-popup">Вызвать сантехника</a>
+				 <p class="banner__text banner__text--line banner__text--inner-page">Запишитесь по телефону +7 (343) 266 36 43 или оставьте заявку на сайте</p>
+				 <a href="#call-service" class="banner__btn btn btn--blue open-single-service open-popup">Вызвать сантехника</a>
 			</div>
 			<div class="banner__img-box banner__img-box--inner-page">
 				<img src="img/banner-bg-poverka.png" alt="" class="banner__img img-responsive">
@@ -92,45 +142,21 @@
 		</div>
 	</div>
 	 
-	<footer class="footer">
-		<div class="container grid">
-			<div class="footer__left-side grid">
-				<img src="img/logo.svg" alt="" class="footer__logo">
-				<ul class="footer-nav grid">
-					<li class="footer-nav__item"><a href="#" class="footer-nav__url">Услуги</a></li>
-					<li class="footer-nav__item"><a href="#" class="footer-nav__url">Специалисты</a></li>
-					<li class="footer-nav__item"><a href="#" class="footer-nav__url">Наши работы</a></li>
-					<li class="footer-nav__item"><a href="#" class="footer-nav__url">Отзывы</a></li>
-					<li class="footer-nav__item"><a href="#" class="footer-nav__url">Нас выбирают</a></li>
-					<li class="footer-nav__item"><a href="#" class="footer-nav__url">Частые вопросы</a></li> 
-					<li class="footer-nav__item"><a href="#" class="footer-nav__url">Как мы работаем</a></li>
-				</ul>
-			</div>
-			<div class="footer__right-side grid">
-				<a href="#" class="btn footer__btn open-popup">Перезвоните мне</a>
-				<div class="footer__work-box grid">	
-					<a href="#" class="footer__social">
-						<img src="img/wa.svg" alt="" class="footer__social-img">
-					</a>
-					<div class="footer__text-box">
-						<a href="tel:+7 (343) 266 36 43" class="footer__link">+7 (343) 266 36 43</a>
-						<p class="footer__text">Ежедневно с 9:00 до 20:00</p>
-					</div>
-				</div>
-			</div>
+	 
+	<div id="call-service" class="popup-white popup-call grid mfp-hide">
+		<div class="popup-call__header">
+			<h2 class="popup-call__title">Заявка на услугу <span class="text-blue">поверка счетчиков</span></h2>
+			<p class="popup-call__subtitle">Оставьте свои контактные данные, и мы устраним все проблемы!</p>
 		</div>
-	</footer>
-	<div id="licenses" class="popup-white mfp-hide">
-		<div class="popup-white__img-list grid">
-			<a data-fancybox="gallery" href="/img/license-1.png" class="popup-white__img-link">
-				<img src="img/license-1.png" alt="" class="popup-white__img img-responsive">
-			</a>
-			<a data-fancybox="gallery" href="/img/license-2.png" class="popup-white__img-link">
-				<img src="img/license-2.png" alt="" class="popup-white__img img-responsive">
-			</a>
-			<a data-fancybox="gallery" href="/img/license-3.png" class="popup-white__img-link">
-				<img src="img/license-3.png" alt="" class="popup-white__img img-responsive">
-			</a>
+		<form action="" class="popup-call__form form-call">
+			<input type="text" name="name" class="form-call__input input" required placeholder="Имя" >
+			<input type="text" name="phone" class="form-call__input input" required placeholder="Телефон">
+			<button class="form-call__btn btn btn--blue">Обратный звонок</button>
+			<p class="form__accept form-call__accept">Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь 
+				с <a href="/policy.html" target="_blank">политикой конфиденциальности</a></p>
+		</form>
+		<div class="popup-call__img-box">
+			<img src="img/call-santeh.png" alt="" class="popup-call__img img-responsive">
 		</div>
 	</div>
 	<script src="js/scripts.min.js"></script>
