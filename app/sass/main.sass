@@ -448,6 +448,7 @@ a
     box-sizing: border-box
     border-radius: 10px
     overflow: hidden
+    display: block
   &__img
     object-fit: cover
     width: 100%
@@ -550,6 +551,14 @@ a
   &__list
     grid-template-columns: 1fr 1fr
     grid-gap: 40px
+    .service
+      &:nth-child(n+9)
+        display: none
+      &.active
+        display: grid
+  &__more-btn
+    margin: 20px auto
+    display: block
 
 .service
   grid-template-columns: max-content 1fr
@@ -557,6 +566,7 @@ a
   border: 1px solid $grey
   border-radius: 10px
   overflow: hidden
+  
   &__img
     max-width: 225px
     max-height: 225px
@@ -676,6 +686,7 @@ a
     margin: 0
     a
       text-decoration: none
+      
 .specialists
   padding: 90px 0 100px
   &__title
@@ -694,8 +705,16 @@ a
     border-radius: 10px
     overflow: hidden
     background: $lGrey
-    max-width: 300px
-
+    max-width: 300px  
+    display: flex
+    flex-direction: column
+  &.owl-carousel 
+    .owl-stage
+      display: flex 
+    .owl-item  
+      display: flex 
+      flex: 1 0 auto 
+        
 .specialist
   &__img-box
     background: #f3f3f3
@@ -704,16 +723,28 @@ a
     width: 100%
     height: 100%
     object-fit: cover
+    object-position: top
   &__text-box
     padding: 20px 15px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    flex-grow: 1
   &__name
     font-size: em(18px)
     font-weight: bold
-    margin: 0
+    margin: 0 0 rem(8px)
     line-height: 1.3
   &__exp, &__level
     line-height: 1.3
-    margin: 0
+    margin: 0 0 rem(5px)
+  &__btn
+    margin-top: 12px
+    width: 100%
+    display: block
+    max-width: 100%
+    text-align: center
+  
 
 .reviews
   padding: 140px 0 0
@@ -1029,5 +1060,30 @@ a
 
 .policy
   padding: 60px 0
+
+.map
+  height: 70vh
+  width: 100%
+  position: relative
+  // padding: 50px 0
+  iframe
+    width: 100%
+    height: 100%
+  &__contacts
+    position: absolute
+    left: 100px
+    top: 70px
+    background-color: #fff
+    border-radius: 30px
+    padding: 50px 30px 
+    max-width: 300px
+    border: 2px solid $blue
+    line-height: 1.4
+  &__text
+
+  &__link 
+    text-decoration: none 
+    font-size: 1em 
+    color: #000 
 
 @import "media" // Всегда в конце

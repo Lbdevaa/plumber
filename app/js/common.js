@@ -100,4 +100,13 @@ $(function() {
     }
   })
 
+  $(".fancybox").fancybox();
+
+
+  $('.services__more-btn').click(function(e){
+    e.preventDefault();
+    $(".services .service:nth-child(n+9)").addClass('active');
+    $(".services__more-btn").hide();
+  })
+
 });
