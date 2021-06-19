@@ -566,7 +566,7 @@ a
   border: 1px solid $grey
   border-radius: 10px
   overflow: hidden
-  
+
   &__img
     max-width: 225px
     max-height: 225px
@@ -686,7 +686,7 @@ a
     margin: 0
     a
       text-decoration: none
-      
+
 .specialists
   padding: 90px 0 100px
   &__title
@@ -705,16 +705,16 @@ a
     border-radius: 10px
     overflow: hidden
     background: $lGrey
-    max-width: 300px  
+    max-width: 300px
     display: flex
     flex-direction: column
-  &.owl-carousel 
+  &.owl-carousel
     .owl-stage
-      display: flex 
-    .owl-item  
-      display: flex 
-      flex: 1 0 auto 
-        
+      display: flex
+    .owl-item
+      display: flex
+      flex: 1 0 auto
+
 .specialist
   &__img-box
     background: #f3f3f3
@@ -744,7 +744,6 @@ a
     display: block
     max-width: 100%
     text-align: center
-  
 
 .reviews
   padding: 140px 0 0
@@ -1075,15 +1074,35 @@ a
     top: 70px
     background-color: #fff
     border-radius: 30px
-    padding: 50px 30px 
+    padding: 50px 30px
     max-width: 300px
     border: 2px solid $blue
     line-height: 1.4
   &__text
 
-  &__link 
-    text-decoration: none 
-    font-size: 1em 
-    color: #000 
+  &__link
+    text-decoration: none
+    font-size: 1em
+    color: #000
 
+.contacts
+  padding: 90px 0
+  &__wrap
+    grid-template-columns: 1fr 2fr
+    grid-gap: 20px
+  &__title
+    font-size: rem(40px)
+  &__text-box
+    padding: 60px 0
+    a
+    p
+  &__photos
+    min-height: 70vh
+    max-height: 85vh
+
+  &__photo
+    width: 100%
+    height: 100%
+    object-fit: contain
+    object-position: top
 @import "media" // Всегда в конце

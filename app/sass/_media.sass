@@ -2,14 +2,19 @@
 
 /*==========	Desktop First	==========*/
 @media only screen and (max-width : 1370px)
+
 	.reviews-slider
 		max-width: 1280px
 	.specialists-slider
 		max-width: 1280px
 	.works-slider
 		max-width: 1280px
-	.header>div
-		grid-column-gap: 30px
+	.header
+		& >div
+			grid-column-gap: 30px
+		&__logo-box
+			width: 250px
+
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1260px)
 	.header
@@ -28,6 +33,7 @@
 		margin: 0 1em 0 0
 	.need > div, .stages-work>div, .footer-nav, .footer>div
 		grid-gap: 20px
+
 @media only screen and (max-width : 1150px)
 	.nav
 		&__url
@@ -39,6 +45,7 @@
 		grid-template-columns: 1fr
 	.banner__img-box
 		width: 400px
+
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
 	/**/
@@ -501,6 +508,17 @@
 			margin-bottom: 20px
 		&__accept
 			margin-bottom: 0
+
+	.contacts
+		padding: 30px 0
+		&__wrap
+			grid-template-columns: 1fr
+		&__title
+			font-size: rem(32px)
+		&__text-box
+			padding: 30px 0
+		&__photos
+			min-height: 230px
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
 	.map
