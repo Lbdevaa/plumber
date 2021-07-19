@@ -53,6 +53,21 @@ a
   margin: 0 0 em(10px)
   font-weight: 700
 
+.nav
+  margin: 0
+  padding: 0
+  display: inline-block
+  margin-right: 55px
+  &__item
+    display: inline-block
+    margin-right: 40px
+    &:last-child
+      margin-right: 0
+  &__url
+    text-decoration: none
+    font-size: em(16px)
+    color: #000000
+
 .header
   padding: 20px 0 10px
   background-color: #ffffff
@@ -60,10 +75,12 @@ a
     grid-template-columns: max-content 1fr
     // grid-column-gap: 140px
     justify-items: end
+    grid-column-gap: 30px
   &__logo-box
-    width: 315px
-    height: 65px
+    width: auto
+    max-height: 65px
     display: inline-block
+    align-self: end
   &__logo
     width: 100%
     height: 100%
@@ -97,21 +114,10 @@ a
   &__text
     margin: 0
     font-size: em(14px)
-
-.nav
-  margin: 0
-  padding: 0
-  display: inline-block
-  margin-right: 55px
-  &__item
-    display: inline-block
-    margin-right: 40px
-    &:last-child
-      margin-right: 0
-  &__url
-    text-decoration: none
-    font-size: em(16px)
-    color: #000000
+  &__nav
+    display: flex
+    height: 100%
+    align-items: flex-end
 
 .mobile-menu
   position: fixed
