@@ -1,4 +1,12 @@
 $(function () {
+  function get_cookie(cookie_name) {
+    var results = document.cookie.match('(^|;) ?' + cookie_name + '=([^;]*)(;|$)');
+    if (results)
+      return (unescape(results[2]));
+    else
+      return null;
+  }
+
   //input mask phone
   $("input[name*='phone']").inputmask("+7 (999) 999-99-99");
 
@@ -25,9 +33,6 @@ $(function () {
     $('#call-service .popup-call__title span').text(serviceName);
   });
 
-
-
-
   //burger
   $(".burger").click(function () {
     $(this).toggleClass("active");
@@ -43,9 +48,7 @@ $(function () {
     $(".burger").removeClass("active");
   });
 
-
   //sliders
-
   $('.works-slider').owlCarousel({
     dots: false,
     responsive: {
@@ -102,11 +105,59 @@ $(function () {
 
   $(".fancybox").fancybox();
 
-
   $('.services__more-btn').click(function (e) {
     e.preventDefault();
     $(".services .service:nth-child(n+9)").addClass('active');
     $(".services__more-btn").hide();
   })
 
+  $('.cities__link.active').click(function (e) {
+    e.preventDefault();
+    $('.cities').removeClass('active')
+  })
+
+  $('.loc__current').click(function (e) {
+    e.preventDefault();
+    $('.cities').toggleClass('active')
+  })
+
+  // current city
+  if (get_cookie('clickCity')) {
+    $('.quiz-city').addClass('hide');
+  }
+  $('.quiz-city__reject').click(function (e) {
+    e.preventDefault();
+    $('.header__quiz-city').addClass('hide');
+    $('.cities').addClass('active')
+    document.cookie = 'clickCity=true'
+  })
+
+  $('.quiz-city__accept').click(function (e) {
+    e.preventDefault();
+    $('.header__quiz-city').addClass('hide');
+    document.cookie = 'clickCity=true'
+  })
+
+  let myCity = get_cookie('currentCity')
+
+  ymaps.ready(function () {
+    var geolocation = ymaps.geolocation.city;
+
+    switch (geolocation) {
+      case 'Екатеринбург':
+        document.cookie = 'currentCity=Екатеринбург; domain=xn---24-5cdbjyys1ab8bp7bzb.xn--p1ai'
+        if (!get_cookie('clickCity')) {
+          location.host = 'xn---24-5cdbjyys1ab8bp7bzb.xn--p1ai'
+        }
+        break;
+      case 'Челябинск':
+        document.cookie = 'currentCity=Челябинск; domain=xn---24-5cdbjyys1ab8bp7bzb.xn--p1ai'
+        if (!get_cookie('clickCity')) {
+          location.host = 'xn--90ahkico2a6b9d.xn---24-5cdbjyys1ab8bp7bzb.xn--p1ai'
+        }
+        break;
+      default:
+        document.cookie = 'currentCity=Екатеринбург; domain=xn---24-5cdbjyys1ab8bp7bzb.xn--p1ai'
+    }
+  });
 });

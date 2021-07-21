@@ -16,6 +16,9 @@ body
   &-underline
     text-decoration: underline
 
+.hide
+  display: none
+
 a
   color: #000000
 
@@ -90,7 +93,7 @@ a
     margin-right: 40px
   &__right-side
     grid-template-columns: repeat(3, max-content)
-    align-items: center
+    align-items: end
     padding-top: 20px
   &__work-box
     grid-template-columns: max-content 1fr
@@ -118,6 +121,61 @@ a
     display: flex
     height: 100%
     align-items: flex-end
+  &__loc
+    margin-top: 10px
+
+.loc
+  position: relative
+  &__text
+    font-size: rem(13px)
+    margin: 0
+    user-select: none
+  &__current
+    font-weight: bold
+    cursor: pointer
+    color: $blue
+    transition: .2s ease
+    will-change: color
+    &:hover
+      color: #000
+
+.cities
+  position: absolute
+  right: 20px
+  top: 28px
+  z-index: -1
+  padding: 0
+  margin: 0
+  display: none
+  &.active
+    display: block
+    z-index: 10
+  &__item
+    list-style: none
+    margin-bottom: 8px
+  &__link
+    font-size: rem(13px)
+    user-select: none
+    transition: .2s ease
+    will-change: color
+    &.active
+      opacity: 0.4
+    &:not(.active):hover
+      color: $blue
+
+.quiz-city
+  position: absolute
+  top: 20px
+  z-index: 10
+  &__text
+    font-size: rem(14px)
+    margin: 0 0 rem(8px)
+  &__btns
+  &__accept, &__reject
+    font-size: rem(12px)
+    padding: rem(8px) rem(10px)
+  &__accept
+    margin-right: rem(6px)
 
 .mobile-menu
   position: fixed
