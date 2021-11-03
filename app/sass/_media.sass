@@ -260,11 +260,12 @@
 	.service
 		position: relative
 		display: flex
-		// height: 150px
+		&__img-box
+			width: 120px
 		&__img
 			max-width: 120px
-			width: 120px
-			height: auto
+			width: 100%
+			height: 100%
 		&__text-side
 			padding: 16px
 		&__name
@@ -517,8 +518,6 @@
 			grid-template-columns: 1fr
 		&__title
 			font-size: rem(32px)
-		&__text-box
-			padding: 30px 0
 		&__photos
 			min-height: 230px
 /* Extra Small Devices, Phones */

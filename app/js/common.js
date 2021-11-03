@@ -148,21 +148,21 @@ $(function () {
       case 'Екатеринбург':
         document.cookie = 'currentCity=Екатеринбург; domain=xn---24-5cdbjyys1ab8bp7bzb.xn--p1ai'
         if (!get_cookie('clickCity')) {
-          document.cookie = 'clickCity=true'
+          document.cookie = 'clickCity=true; domain=xn---24-5cdbjyys1ab8bp7bzb.xn--p1ai'
           location.host = 'xn---24-5cdbjyys1ab8bp7bzb.xn--p1ai'
         }
         break;
       case 'Челябинск':
         document.cookie = 'currentCity=Челябинск; domain=xn---24-5cdbjyys1ab8bp7bzb.xn--p1ai'
         if (!get_cookie('clickCity')) {
-          document.cookie = 'clickCity=true'
+          document.cookie = 'clickCity=true; domain=xn---24-5cdbjyys1ab8bp7bzb.xn--p1ai'
           location.host = 'xn--90ahkico2a6b9d.xn---24-5cdbjyys1ab8bp7bzb.xn--p1ai'
         }
         break;
       default:
         document.cookie = 'currentCity=Екатеринбург; domain=xn---24-5cdbjyys1ab8bp7bzb.xn--p1ai'
         if (!get_cookie('clickCity')) {
-          document.cookie = 'clickCity=true'
+          document.cookie = 'clickCity=true; domain=xn---24-5cdbjyys1ab8bp7bzb.xn--p1ai'
           location.host = 'xn--90ahkico2a6b9d.xn---24-5cdbjyys1ab8bp7bzb.xn--p1ai'
         }
     }

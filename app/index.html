@@ -865,9 +865,10 @@
 		<div class="container">
 			<h2 class="have-questions__title section-title">Остались вопросы?</h2>
 			<p class="have-questions__subtitle">Оставьте заявку и мы Вам перезвоним!</p>
-			<form action="" class="form have-questions__form grid">
-				<input type="text" name="name" id="" placeholder="Имя" class="input" required>
-				<input type="text" name="phone" id="" placeholder="Телефон" class="input" required>
+			<form action="" class="form have-questions__form grid block-form" data-name="Остались вопросы" data-nameservice="Остались вопросы">
+				<input type="checkbox" name="accept-bot" class="accept-bot" value="yes">
+				<input type="text" name="name" id="" placeholder="Имя" class="input" required="">
+				<input type="text" name="phone" id="" placeholder="Телефон" class="input" required="" inputmode="text">
 				<button class="btn btn--blue form__btn">Заказать обратный звонок</button>
 				<p class="form__accept form__accept--questions">Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь 
 					с <a href="/policy.html" target="_blank">политикой конфиденциальности</a></p>
