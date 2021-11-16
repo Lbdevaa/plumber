@@ -29,26 +29,57 @@
 		margin-right: 20px
 		&__item
 			margin-right: 20px
+
 	.service__price
 		margin: 0 1em 0 0
-	.need > div, .stages-work>div, .footer-nav, .footer>div
+
+	.stages-work>div, .footer-nav, .footer>div
 		grid-gap: 20px
 
 @media only screen and (max-width : 1150px)
 	.nav
 		&__url
 			font-size: em(12px)
+
+	.need
+		&__btn, &__url
+			width: auto
+			padding: em(24px) em(30px)
+
 	.header__btn
 		font-size: em(12px)
 		padding: 1em
+
 	.banner__list
 		grid-template-columns: 1fr
+
 	.banner__img-box
 		width: 400px
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
-	/**/
+	.need
+		&__btn, &__url
+			width: auto
+			padding: em(16px)
+	.stages-work>div
+		grid-template-columns: 1fr
+
+	.service
+		&__img-box
+			width: 150px
+		&__text-side
+			display: flex
+			flex-direction: column
+			padding: 30px 16px
+		&__link
+			margin-top: em(20px)
+		&__btn
+			padding: em(10px)
+			width: 100%
+			max-width: 100%
+			text-align: center
+			margin-right: 0
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
@@ -259,15 +290,15 @@
 
 	.service
 		position: relative
-		display: flex
+		display: grid
+		grid-template-columns: 120px 1fr
 		&__img-box
-			width: 120px
+			width: auto
 		&__img
-			max-width: 120px
 			width: 100%
 			height: 100%
 		&__text-side
-			padding: 16px
+			padding: 16px 16px 32px
 		&__name
 			font-size: em(12px)
 			margin-bottom: rem(15px)
@@ -282,6 +313,7 @@
 			overflow: hidden
 			max-width: 52px
 			display: block
+			margin: 0
 		&__btn
 			position: absolute
 			height: 30px
