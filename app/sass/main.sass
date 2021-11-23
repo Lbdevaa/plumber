@@ -674,14 +674,13 @@ a
 .need
   padding: 110px 0
   >div
-    grid-template-columns: 2fr 3fr
-    grid-column-gap: 30px
+    grid-template-columns: 4fr 7fr
+    grid-column-gap: 15px
   &__title
     margin: 0 0 em(8px)
     font-size: em(30px)
   &__btns
     display: flex
-    justify-content: space-around
     align-items: center
   &__btn
     font-size: em(18px)
@@ -689,6 +688,9 @@ a
     text-align: center
     width: 300px
     max-width: 300px
+    margin-right: 15px
+    &:last-child
+      margin-right: 0
   &__url
     width: 300px
     max-width: 300px
