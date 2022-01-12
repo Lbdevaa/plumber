@@ -13,7 +13,11 @@
 		& >div
 			grid-column-gap: 30px
 		&__logo-box
-			width: 250px
+			width: 230px
+		&__nav
+			margin-right: 20px
+		&__btn
+			margin-right: 20px
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1260px)
@@ -24,7 +28,12 @@
 		&__btn
 			margin-right: 20px
 		&__logo-box
-			width: 250px
+			width: 200px
+		&__social
+			width: 30px
+			height: 30px
+			margin-right: 10px
+
 	.nav
 		margin-right: 20px
 		&__item
@@ -82,33 +91,9 @@
 			text-align: center
 			margin-right: 0
 
-/* Small Devices, Tablets */
-@media only screen and (max-width : 768px)
-	html
-		scroll-behavior: smooth
-		scroll-padding-top: 70px
-	body
-		scroll-padding-top: 70px
-	.section-title
-		font-size: em(15px)
-	.owl-stage
-		left: -40px
+	.burger
+		display: block
 
-	.btn
-		font-size: em(14px)
-		padding: rem(17px)
-		width: 100%
-		max-width: 100%
-
-	.popup-white
-		padding: 50px 20px
-		&__img-list
-			grid-template-columns: 1fr
-			grid-gap: 15px
-		&__img-link:nth-of-type(2)
-			// grid-row: 1
-			// grid-column: 1/3
-			// height: 120px
 	.header
 		padding: 20px 0
 		box-shadow: 0px 1px 1px rgba(208, 208, 208, 0.5)
@@ -144,6 +129,35 @@
 			font-size: em(9px)
 		&__loc
 			display: none
+			
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	html
+		scroll-behavior: smooth
+		scroll-padding-top: 70px
+	body
+		scroll-padding-top: 70px
+	.section-title
+		font-size: em(15px)
+	.owl-stage
+		left: -40px
+
+	.btn
+		font-size: em(14px)
+		padding: rem(17px)
+		width: 100%
+		max-width: 100%
+
+	.popup-white
+		padding: 50px 20px
+		&__img-list
+			grid-template-columns: 1fr
+			grid-gap: 15px
+		&__img-link:nth-of-type(2)
+			// grid-row: 1
+			// grid-column: 1/3
+			// height: 120px
+	
 
 	.block-time
 		max-width: 173px
@@ -158,8 +172,7 @@
 			span
 				font-size: rem(13px)
 
-	.burger
-		display: block
+	
 
 	.banner
 		background: none
